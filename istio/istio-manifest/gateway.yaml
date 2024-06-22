@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: ichsan-setiawan-gateway-api
+spec:
+  selector:
+    istio: istio-ingressgateway
+  servers:
+  - hosts:
+    - 34-171-120-56.xip.io
+    port:
+      name: http
+      number: 80
+      protocol: HTTP2
+    tls:
+      httpsRedirect: true

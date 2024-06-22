@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: validation
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: validation
+  template:
+    metadata:
+      labels:
+        app: validation
+      annotations:
+        cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
+    spec:
+      containers:
+        - name: validation
+          image: IMAGE
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Gi
+            limits:
+              cpu: 100m
+              memory: 128Gi
