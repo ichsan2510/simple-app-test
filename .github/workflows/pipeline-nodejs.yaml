@@ -64,12 +64,12 @@ jobs:
         context: ./service/${{ env.IMAGE }}
         platforms: linux/amd64
         push: true
-        tags: ichsan25/${{ env.IMAGE }}:${{ github.sha }};
+        tags: ichsan25/${{ env.IMAGE }}:latest
 
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
       run: |-
         ls -a
-        sed -i s#IMAGE#ichsan25/${{ env.IMAGE }}:${{ github.sha }}#g ./service/${{ env.IMAGE }}/k8s/deployment.yaml
+        sed -i s#IMAGE#ichsan25/${{ env.IMAGE }}:latest#g ./service/${{ env.IMAGE }}/k8s/deployment.yaml
         kubectl apply -f ./service/${{ env.IMAGE }}/k8s
         kubectl rollout status deployment/${{ env.IMAGE }}
