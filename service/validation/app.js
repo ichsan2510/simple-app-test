@@ -5,7 +5,7 @@ const axios = require('axios');
 const app = express();
 require('dotenv').config()
 const port  = process.env.PORT || 3000;
-const api_register  = process.env.API_REGISTER || 'http://localhost:8080/users';
+const api_register  = process.env.API_REGISTER || 'http://user:8080/users';
 
 app.use(bodyParser.json());
 
