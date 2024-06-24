@@ -6,7 +6,7 @@ spec:
   gateways:
   - ichsan-setiawan-gateway-api
   hosts:
-  - 34-171-120-56.xip.io
+  - 34-171-145-83.xip.io
   http:
   - match:
     - uri:
