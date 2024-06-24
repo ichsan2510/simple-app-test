@@ -15,6 +15,7 @@ app.post('/validate', async (req, res) => {
     const { username, password } = req.body;
     try {
 // fetching users from user service
+        // const response = await axios.get('http://localhost:8080/users');
         const response = await axios.get(api_register);
         const users = response.data;
 // Finding the user with the matching username and password
@@ -31,6 +32,7 @@ app.post('/validate', async (req, res) => {
 
 // Start the server
 if (require.main === module) {
+    // app.listen(3000, () => {
     app.listen(port, () => {
         console.log('User validation service running on port 3000');
     });

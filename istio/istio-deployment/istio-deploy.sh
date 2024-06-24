@@ -7,7 +7,7 @@ ISTIO_PATH=$(pwd)/istio-$ISTIO_VERSION/bin
 # Set exit if error
 set -e
     # Evaluate command that will be executed
-    if [ $1 != "install" ] && [ $1 != "upgrade" ];
+    if [ $1 != "install" ];
     then
         echo "Please put the command either 'install' or 'upgrade'"
         exit 1

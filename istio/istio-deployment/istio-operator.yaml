@@ -68,7 +68,7 @@ spec:
                 port: 80
               - name: https
                 port: 443
-            loadBalancerIP: "34.171.120.56"
+            loadBalancerIP: "34.171.145.83"
   meshConfig:
     accessLogFile: /dev/stdout
     accessLogEncoding: "JSON"
