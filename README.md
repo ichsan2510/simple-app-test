@@ -24,7 +24,7 @@ Record the response for registration user.
 #### Validating a user
 
 ```bash
-curl -X POST https://34.171.145.83.xip.io/validate -H "Content-Type: application/json" -d '{"username":"testuser", "password":"testpass"}'
+curl -X POST https://34-171-145-83.xip.io/validate -H "Content-Type: application/json" -d '{"username":"testuser", "password":"testpass"}'
 ```
 
 Response that is received.

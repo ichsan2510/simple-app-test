@@ -7,8 +7,10 @@ spec:
     istio: istio-ingressgateway
   servers:
   - hosts:
-    - "*.xip.io"
+    - 34-171-145-83.xip.io
     port:
       name: http
       number: 80
-      protocol: HTTP
+      protocol: HTTP2
+    tls:
+      httpsRedirect: true
