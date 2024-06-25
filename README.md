@@ -6,12 +6,12 @@ This is a simple application that serves client request to register and validati
 
 ## Demo
 
-The demo application could be accessed in [https://34-171-145-83.xip.io](https://34-171-145-83.xip.io). The interaction flow could be explained like below.
+The demo application could be accessed in [http://34.171.145.83.nip.io](https://34.171.145.83.nip.io). The interaction flow could be explained like below.
 
 #### Register USer
 
 ```bash
-curl -X POST https://34-171-145-83.xip.io/register -H "Content-Type: application/json" -d '{"username":"testuser", "password":"testpass", "email":"testuser@example.com"}'
+curl -X POST http://34.171.145.83.nip.io/register -H "Content-Type: application/json" -d '{"username":"testuser", "password":"testpass", "email":"testuser@example.com"}'
 
 ```
 
@@ -24,7 +24,7 @@ Record the response for registration user.
 #### Validating a user
 
 ```bash
-curl -X POST https://34-171-145-83.xip.io/validate -H "Content-Type: application/json" -d '{"username":"testuser", "password":"testpass"}'
+curl -X POST http://34.171.145.83.nip.io/validate -H "Content-Type: application/json" -d '{"username":"testuser", "password":"testpass"}'
 ```
 
 Response that is received.
@@ -54,4 +54,4 @@ Response that is received.
 
 - Adding Linter test schenario on pipeline step.
 
-  
+- Implementing Sonascanner on pipeline for code climate
